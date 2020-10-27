@@ -1,0 +1,275 @@
+<html lang="zh">
+<head>
+
+    <title>Tron Village - 个人中心</title>
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="创建自己的生产，开发生产并每天获得Tron加密货币！">
+    <meta name="keywords" content="tron, village, tron village, smart, 合约, 投资, tron, coin, trx, 游戏, 策略, 网络, 网赚, 被动收入, 投资者, 投资基金, 收入, 财务, 免费, 简单收益, 如何在网上赚钱, 博彩, bet, 智能合约, 加密货币, 赏金, 比特币, bitcoin, 钱, 轻松赚钱, MMM骗局, 传销(MLM), dice2win, eosbet, mmm3eth, easy invest, 333eth, gorgona, 投资基金, 庞氏骗局">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tron Village 是Tron Network区块链的经济策略。">
+    <meta property="og:description" content="创建自己的生产，开发生产并每天获得Tron加密货币！">
+    <meta property="og:image" content="../images/icon_preview.jpg"/>
+
+    <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/game.css?v=5" type="text/css">
+    <link rel="stylesheet" href="../css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/hover.css" type="text/css">
+    <link rel="stylesheet" href="../css/simplebar.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css?v=5" type="text/css">
+    <link rel="stylesheet" href="../css/play.css?v=5" type="text/css">
+
+    <script src="../js/dest/jquery-2.1.4.min.js"></script>
+    <script src="../js/dest/jquery.actual.js"></script>
+    <script src="../js/dest/countUp.js"></script>
+    <script src="../js/dest/wow.js"></script>
+    <script src="../js/dest/bootstrap.min.js"></script>
+    <script src="../js/dest/tippy.min.js"></script>
+    <script src="../js/dest/sweetalert.min.js"></script>
+    <script src="../js/dest/tronapp.js?v=5"></script>
+    <script src="../js/dest/app.js?v=5"></script>
+    <script src="./index.js?v=5"></script>
+
+</head>
+<body style="opacity: 0">
+    <div id="preloader-play"></div>
+    <div class="fixed-crossbrowser-background"></div>
+    <nav id="nav-play" style="opacity: 0; width: 100%; z-index: 2" class="ms-navbar navbar-fixed-top wow fadeInDown">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav ms-navbar-right nav-item-village">
+                <li style="width: 82px" class="dropdown">
+                    <a id="current-lang" href="#" class="dropdown-toggle ms-lang" data-toggle="dropdown"><span id="current-lang-inner"></span><b class="caret"></b></a>
+                    <ul id="dropdown-lang" class="dropdown-menu">
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav ms-navbar__center nav-item-village">
+                <li><a id="village-link" target="_blank" style="text-transform: none;"><i class="fas fa-home"></i>&nbsp;&nbsp;<span id="village-text">村庄</span> <span id="village-name">...</span></a></li>
+            </ul>
+            <ul class="nav navbar-nav ms-navbar-left nav-item-village">
+                <li><a id="back" href="./index.html"><i class="fas fa-angle-left"></i>&nbsp;&nbsp;主页</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="notEnoughBalance" class="hidden">
+        <span class="tooltip-text">
+            ...
+        </span>
+    </div>
+    <div id="chestBuildTooltip" class="hidden">
+        <div class="tooltip-text">所有收入的一半都进入国库资金。这些资金可用于购置新建筑以扩大生产和增加利润。</div>
+    </div>
+    <div id="chestFreeTooltip" class="hidden">
+        <div class="tooltip-text">所有收入的一半都进入自由资金。这些资金可以随时提取，也可以用于开发您的村庄。</div>
+    </div>
+    <div style="background: none" class="ms-content">
+        <div class="eula_container">
+            <div class="el-page_WORM">
+                <div id="stats-container" class="container wow fadeIn" data-wow-delay="0.65s">
+                    <div style="height: 10px"></div>
+                    <div class="row">
+                        <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-0 card-stats">
+                            <div class="sign-box">
+                                <div style="background-color: #ffa453" class="sign">
+                                    <span>统计</span>
+                                </div>
+                            </div>
+                            <div id="coin-card-1" class="coin-card">
+                                <div class="coin-card-header"></div>
+                                <div class="coin-card-content">
+                                    <div style="padding-top: 16px;" class="row">
+                                        <div class="col-xs-12 col-sm-6">
+                                            <div class="chest-container">
+                                                <img class="img-responsive center-block stats-image" src="../images/icons/icon_1.png">
+                                                <div style="transform: translateY(-25px);" class="chest-balance">
+                                                    <span class="chest-balance-header">储备:</span>
+                                                    <div class="chest-balance-padding"></div>
+                                                    <span class="chest-balance-value remove-transform"><span id="amount-reserve">...</span> <span class="trx">trx</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="line-1" style="height: 35px" class="col-xs-12"></div>
+                                        <div class="col-xs-12 col-sm-6">
+                                            <div class="chest-container">
+                                                <img class="img-responsive center-block stats-image" src="../images/icons/icon_2.png">
+                                                <div style="transform: translateY(-25px);"  class="chest-balance">
+                                                    <span class="chest-balance-header">游戏者:</span>
+                                                    <div class="chest-balance-padding"></div>
+                                                    <span class="chest-balance-value remove-transform"><span id="amount-players">...</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="line-2" style="height: 35px" class="col-xs-12"></div>
+                                        <div class="col-xs-12 col-sm-6">
+                                            <div class="chest-container">
+                                                <img class="img-responsive center-block stats-image" src="../images/icons/icon_3.png">
+                                                <div style="transform: translateY(-15px);"  class="chest-balance">
+                                                    <span class="chest-balance-header">游戏中的建筑物:</span>
+                                                    <div class="chest-balance-padding"></div>
+                                                    <span class="chest-balance-value remove-transform"><span id="amount-buildings">...</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="line-3" style="height: 35px" class="col-xs-12"></div>
+                                        <div class="col-xs-12 col-sm-6">
+                                            <div class="chest-container">
+                                                <img class="img-responsive center-block stats-image" src="../images/icons/icon_4.png">
+                                                <div style="transform: translateY(-15px);"  class="chest-balance">
+                                                    <span class="chest-balance-header">已付款:</span>
+                                                    <div class="chest-balance-padding"></div>
+                                                    <span class="chest-balance-value remove-transform"><span id="amount-payout">...</span> <span class="trx">trx</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 10px; padding: 0"></div>
+                                    <a class="btn-card-outer">
+                                        <button id="btn-tronscan" class="btn-card btn-white hvr-grow">
+                                            <i class="fas fa-search"></i>
+                                            <span>tronscan</span>
+                                        </button>
+                                    </a>
+                                </div>
+                                <div class="coin-card-footer"></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-0 card-account">
+                            <div class="sign-box">
+                                <div style="background-color: #ff2c27" class="sign">
+                                    <span>帐户</span>
+                                </div>
+                            </div>
+
+                            <div id="coin-card-2" class="coin-card">
+                                <div class="coin-card-header"></div>
+                                <div class="coin-card-content">
+                                    <div class="row">
+                                        <div class="coin-stats">
+                                            <div>
+                                                <span><span class="stats-text">已建造的建筑物:</span>  <span class="pull-right stats-number"><span id="builds-count" style="font-weight: bold">...</span> <img src="../images/house-icon.png" class="coin-card-icon"></span></span>
+                                                <div class="coin-card-line"></div>
+                                                <span><span class="stats-text">每小时总收入:</span>  <span class="pull-right stats-number"><span id="builds-per-hour" style="font-weight: bold">...</span>  <img src="../images/bag-coin-icon.png" class="coin-card-icon"></span></span>
+                                                <div class="coin-card-line"></div>
+                                                <div style="height: 3px"></div>
+                                            </div>
+                                        </div>
+                                        <div class="fix col-xs-12 col-sm-6">
+                                            <div class="chest-container">
+                                                <div class="chest-icon chest-icon-left">
+                                                    <img id="btn-tooltip-chest-build" src="../images/info.png" class="info">
+                                                </div>
+                                                <img style="transform: scaleX(-1);" class="img-responsive center-block chest-image" src="../images/chest_build.png">
+                                                <div class="fix chest-balance">
+                                                    <span class="chest-balance-header">国库资金:</span>
+                                                    <div class="chest-balance-padding"></div>
+                                                    <span class="chest-balance-value"><span id="balance-build">...</span> <img src="../images/coin.png" class="icon mCS_img_loaded"></span>
+                                                </div>
+                                                <div style="height: 15px"></div>
+                                                <a class="fix btn-card-outer">
+                                                    <button id="btn-deposit" class="btn-card btn-white hvr-grow">
+                                                        <i class="fas fa-coins"></i>
+                                                        <span>充值</span>
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="fix col-xs-12 col-sm-6">
+                                            <div class="chest-container">
+                                                <div class="chest-icon chest-icon-right">
+                                                    <img id="btn-tooltip-chest-free" src="../images/info.png" class="info chest-info">
+                                                </div>
+                                                <img style="transform: translateY(5%) translateX(-3%);" class="img-responsive center-block chest-image" src="../images/chest_free.png">
+                                                <div class="fix chest-balance">
+                                                    <span class="chest-balance-header">自由资金:</span>
+                                                    <div class="chest-balance-padding"></div>
+                                                    <span class="chest-balance-value"><span id="balance-free">...</span> <img src="../images/coin.png" class="icon mCS_img_loaded"></span>
+                                                </div>
+                                                <div style="height: 15px"></div>
+                                                <a class="fix btn-card-outer">
+                                                    <button id="btn-withdraw" class="btn-card btn-white hvr-grow">
+                                                        <img src="../images/musket/tron_icon.png" style="height: 15px; width: 15px; transform: translateY(-2px) translateX(2px)">
+                                                        提取
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="coin-card-footer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container wow fadeIn" data-wow-delay="0.9s">
+                    <div class="sign-box">
+                        <div class="sign">
+                            <span>商店</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="card-list" class="row">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="social" style="bottom: 0; width: 100%; min-height: unset; margin-top: 0" class="ms-footer">
+        <div class="container">
+            <div style="padding-bottom: 0" class="ms-footer-linkTerm">
+                <a class="hvr-bob" href="#" data-toggle="modal" data-target="#faq-modal" data-dismiss="modal"><span style="font-weight: bold" class="fas fa-info-circle social_icon"></span> <span class="social_header">常问问题</span></a>
+                <a target="_blank" class="hvr-bob" href="https://t.me/TronVillage"><span class="fab fa-telegram social_icon"></span> <span class="social_header">Telegram</span></a>
+                <a target="_blank" href="https://discord.gg/U9rsj4V" class="hvr-bob"><span class="fab fa-discord social_icon"></span> <span class="social_header">Discord</span></a>
+                <a target="_blank" href="https://tronscan.org/#/contract/TCPFHFk9VHjTVVdzK4qFTTUmAyv9VwbJmr" class="hvr-bob"><span style="font-weight: bold" class="fas fa-link social_icon"></span> <span class="social_header">Tronscan</span></a>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div id="buyModalInner" class="modal-dialog ms-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">...</h4>
+                </div>
+                <div style="padding-bottom: 0" class="modal-body">
+                    <form style="margin-bottom: 12px" class="form-signin ms-form-signin ms-login-form" id="loginForm" role="form">
+                        <div id="desc">
+                            <span class="modal-desc">...</span>
+                        </div>
+                        <div class="modal-rate">
+                            <div style="font-size: 15px; margin-bottom: 3px; font-weight: 600">硬币汇率</div>
+                            <div style="display: inline-block; padding: 5px 5px 3px 7px" class="abouts">
+                                <span><b>1 TRX = <span class="rate">...</span></b><img src="../images/coin.png" class="icon-value mCS_img_loaded"></span>
+                            </div>
+                        </div>
+                        <br>
+                        <center><img src="../buildings/build_4.png" class="modal-image" style="max-width: 55%;"></center>
+                        <div style="margin-top: 15px; margin-bottom: 15px; text-align: center">
+                            <div style="text-align: right; padding: 0; display: inline-block">
+                                <label style="padding-top: 3px; font-size: 16px; line-height: 28px" class="modal-count-text control-label">...</label>&nbsp;
+                            </div>
+                            <div style="display: inline-block; max-width: 120px">
+                                <input style="text-align: center; font-weight: bold" type="text" class="modal-input form-control">
+                            </div>
+                        </div>
+                        <button style="margin: 0 auto; display: block" class="btn modal-button btn-lg btn-primary btn-block"><span class="modal-button-text">...</span> <span class="modal-price">...</span> <img id="modal-coin-btn" src="../images/coin.png" class="icon mCS_img_loaded"></button>
+                    </form>
+                </div>
+                <div style="margin-top: 2px; padding-top: 0; padding-bottom: 0; height: 25px" class="modal-footer">
+                    <div class="ms-socLinks">
+                        <div style="height: 1px"></div>
+                        <span class="modal-balance-type" style="color: white; font-size: 12px">...</span>
+                        <div style="height: 1px; margin-bottom: -13px"></div>
+                        <span style="display: inline-block; transform: translateX(5px); color: white; font-size: 16px; line-height: 37px"><span class="modal-balance">...</span> <img id="modal-coin-stats" src="../images/coin.png" style="width: 16px; height: 16px; margin-top: -3px" class="icon mCS_img_loaded"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<html lang="en">
+<head>
+
+    <title>Tron Village - economic strategy based on Tron Network blockchain</title>
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Create your production, develop it and get cryptocurrency Tron every day!">
+    <meta name="keywords" content="tron, village, tron village, smart, contract, investment, throne, tron, coin, trx, game, strategy, earnings on the Internet, passive income, investors, investment fund, income, finance, freebies, simple earnings, how to make money on the Internet, rates, bet, bet, smart contract, cryptocurrency, bounty, bitcoin, bitcoin, money, easy money, mmm, mlm, dice2win, eosbet, mmm3eth, easy invest, iz invest, 333eth, gorgona, investment fund, financial pyramid">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tron Village - economic strategy based on Tron Network blockchain">
+    <meta property="og:description" content="Create your production, develop it and get cryptocurrency Tron every day!">
+    <meta property="og:image" content="../images/icon_preview.jpg"/>
+
+    <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/game.css?v=5" type="text/css">
+    <link rel="stylesheet" href="../css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/hover.css" type="text/css">
+    <link rel="stylesheet" href="../css/simplebar.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css?v=5">
+
+    <script src="../js/dest/jquery-2.1.4.min.js"></script>
+    <script src="../js/dest/jquery.touchSwipe.min.js"></script>
+    <script src="../js/dest/jquery.actual.js"></script>
+    <script src="../js/dest/wow.js"></script>
+    <script src="../js/dest/bootstrap.min.js"></script>
+    <script src="../js/dest/countUp.js"></script>
+    <script src="../js/dest/dragscroll.js"></script>
+    <script src="../js/dest/hammer.min.js"></script>
+    <script src="../js/dest/simplebar.min.js"></script>
+    <script src="../js/dest/tippy.min.js"></script>
+    <script src="../js/dest/tronapp.js?v=5"></script>
+    <script src="../js/dest/app.js?v=5"></script>
+    <script src="./index.js?v=5"></script>
+
+    <style>
+
+        html, body {
+            -webkit-font-smoothing: subpixel-antialiased !important;
+        }
+
+    </style>
+
+</head>
+<body style="opacity: 0">
+
+<div id="preloader"></div>
+
+<nav style="width: 100%; z-index: 2" class="ms-navbar navbar-fixed-top wow fadeInDown">
+    <div class="container-fluid">
+        <ul style="margin-right: 0" class="nav navbar-nav ms-navbar-right">
+            <li style="width: 82px" class="dropdown">
+                <a id="current-lang" href="#" class="dropdown-toggle ms-lang" data-toggle="dropdown"><span id="current-lang-inner"></span><b class="caret"></b></a>
+                <ul id="dropdown-lang" class="dropdown-menu">
+                </ul>
+            </li>
+        </ul>
+        <button type="button" class="navbar-toggle navbar-toggle ms-navbar-toggle" data-toggle="collapse"
+                data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav ms-navbar__center">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#concept">Concept</a></li>
+                <li><a href="#buildings">Factories</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#faq-modal" data-dismiss="modal">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="ms-master">
+    <header id="home" class="ms-header">
+        <div class="container-fluid ms-head">
+            <h1 id="header-logo" class="logo wow zoomIn hvr-shrink" data-wow-delay="0.6s"><a class="ms-logo-link">Tron Village</a></h1>
+            <a><button id="header-tron-play" class="tron-play ms-btn_play wow fadeInUp hvr-grow" data-wow-delay="0.6s">Play</button></a>
+            <div id="trx-counter-outer" class="ms-counter wow fadeInDown" data-wow-delay="0.6s">
+                <p id="trx-counter" style="font-size: 1.8rem; padding-top: 8px;" class="ms-counter-qty">...</p>
+                <p style="font-size: 1.7rem;" class="ms-counter-txt">Reserve TRX</p>
+            </div>
+        </div>
+    </header>
+    <div style="display: none" id="buildingTooltip">
+        <div style="min-width: 340px; min-height: 380px;">
+            <div style="padding: 7px 15px 7px 15px; color: #333333; text-align: left;" class="list-group tarif">
+                <div class="list-group-item list-build bg-light"><b><span style="font-size: 2rem; font-weight: 500" class="header-text subpixel-render" id="build-tooltip-name"></span><span class="text-danger pull-right subpixel-render"><span style="font-size: 1.8rem" class="header-text" id="build-tooltip-percentage">24%</span> <span class="list-build-span">/mo</span></span></b></div>
+                <div style="height: 340px" class="buildingTooltipOuter">
+                    <div class="buildingTooltipInner">
+                        <div class="list-group-item list-build">
+                            <center><img id="build-tooltip-image" src="../buildings/build_2.png" style="max-width: 67%; max-height: 300px"></center>
+                        </div>
+                        <div class="list-group-item list-build"><span class="list-build-span">Profit per hour:</span> <span class="pull-right"><b class="header-text"><span style="font-weight: bold" id="build-tooltip-per-hour">20</span> </b><img src="../images/coin.png" class="icon mCS_img_loaded"> <small class="fa fa-rub" style="font-size: 80%;"></small></span></div>
+                        <div class="list-group-item list-build"><span class="list-build-span">Profit per day:</span><span class="pull-right"><b class="header-text"><span style="font-weight: bold" id="build-tooltip-per-day">600</span> </b><img src="../images/coin.png" class="icon mCS_img_loaded"> <small class="fa fa-rub" style="font-size: 80%;"></small></span></div>
+                        <div style="border-bottom: none !important;" class="list-group-item list-build"><span class="list-build-span">Price:</span> <span class="pull-right"><b class="header-text"><span style="font-weight: bold"  id="build-tooltip-cost">270</span> </b><img src="../images/coin.png" class="icon mCS_img_loaded"> <small class="fa fa-rub" style="font-size: 80%;"></small></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="transform: translateY(-40px)" id="concept"></div>
+    <div class="ms-content">
+        <div id="start-container" class="container">
+            <div class="col-md-7 wow fadeInLeft content" data-wow-delay="0.9s" style="margin: 0 -3px">
+                <h2 class="no-select">
+                    <small id="top-title-tron">Economic strategy built on Tron Network blockchain</small>
+                    <div style="height: 12px"></div>
+                    <span id="title-tron" class="ms-title_intro header-text ms-heading-section">Tron Village</span><br>
+                    <div style="height: 5px"></div>
+                </h2>
+                <p>Tron Village - is an economic strategy where you can earn cryptocurrency Tron. Becoming a member of our project, you can run your own business – acquire and develop your production, which yields real profit.</p>
+                <p style="margin-top: -15px">Play the game and get cryptocurrency Tron every day!</p>
+            </div>
+            <div style="padding: 0; max-width: 500px" class="col-md-5 wow fadeInRight content center-block" data-wow-delay="0.9s">
+                <img id="builds" src="../images/musket/castle.png" class="img-responsive ms-introImg" alt="Responsive image">
+            </div>
+        </div>
+        <div class="wow fadeIn" data-wow-delay="0.5s">
+            <div class="container ms-heroes-box ms-decorLine">
+                <div style="padding-bottom: 0" id="Carousel-Heroes" class="carousel slide ms-carousel">
+                    <ol class="carousel-indicators">
+                        <li id="slide-0" data-target="#Carousel-Heroes" data-slide-to="0" class="active"></li>
+                        <li id="slide-1" data-target="#Carousel-Heroes" data-slide-to="1"></li>
+                    </ol>
+                    <div id="Carousel-Heroes-Inner" style="cursor: move" class="carousel-inner">
+                        <div id="Carousel-Slide-0" data-slide="0" class="item active">
+                            <div class="col-md-5 ms-heroes-boxImg">
+                                <img src="../images/musket/slider1.png" class="img-responsive ms-heroesImg no-select">
+                            </div>
+                            <div class="col-md-7 ms-heroes-txtBox">
+                                <h2 class="no-select">
+                                    <small>Create your village</small>
+                                    <span class="header-text header-carousel">Acquire factories</span>
+                                </h2>
+                                <div class="heroes-description">
+                                    <p class="no-select">In the game you can choose: bakery, teashop, bee yard, brewhouse, confectionery and perfumery factory. Invest in production, develop your village and get profit</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Carousel-Slide-1" data-slide="1" class="item">
+                            <div class="col-md-5 ms-heroes-boxImg">
+                                <img src="../images/musket/slider2.png" class="img-responsive ms-heroesImg no-select">
+                            </div>
+                            <div class="col-md-7 ms-heroes-txtBox">
+                                <h2 class="no-select">
+                                    <small>Develop your village</small>
+                                    <span class="header-text header-carousel">Expand production</span>
+                                </h2>
+                                <div class="heroes-description">
+                                    <p class="no-select">Earned profit you can reinvest in the development of your production. The more factories you have - the higher your yield is.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Carousel-Slide-2" data-slide="2" class="item"></div>
+                        <div id="Carousel-Slide-3" data-slide="3" class="item"></div>
+                    </div>
+                    <a id="slide-prev" class="carousel-control left" href="#Carousel-Heroes" data-slide="prev">‹</a>
+                    <a id="slide-next" class="carousel-control right" href="#Carousel-Heroes" data-slide="next">›</a>
+                </div>
+            </div>
+            <div style="transform: translateY(-40px)" id="buildings"></div>
+            <div class="ms-insert">
+                <div style="padding: 0; overflow-x: hidden; overflow-y: hidden;" id="build-bg" class="col-md-12 ms-build-develop">
+                    <h2 id="homebuilds-header" class="header-text">Build your factories</h2>
+                    <div style="width: 100%; padding: 0;" id="homebuilds-scroll">
+
+                        <!-- LVL 1 -->
+                        <div style="margin-left: 290px; margin-top: 125px" class="building">
+                            <img src="../buildings/build_1.png" class="house">
+                        </div>
+                        <div style="margin-left: 430px; margin-top: 125px;" class="building">
+                            <img data-build="1" src="../images/info.png" class="info" tabindex="0">
+                        </div>
+
+                        <!-- LVL 2 -->
+                        <div data-build="3" style="margin-left: 535px; margin-top: 125px" class="building">
+                            <img src="../buildings/build_2.png" class="house">
+                        </div>
+                        <div style="margin-left: 680px; margin-top: 135px;" class="building">
+                            <img data-build="2" src="../images/info.png" class="info" tabindex="0">
+                        </div>
+
+                        <!-- LVL 3 -->
+                        <div style="margin-left: 765px; margin-top: 120px" class="building">
+                            <img src="../buildings/build_3.png" class="house" style="height: 205px">
+                        </div>
+                        <div style="margin-left: 930px; margin-top: 135px;" class="building">
+                            <img data-build="3" src="../images/info.png" class="info" tabindex="0">
+                        </div>
+
+                        <!-- LVL 4 -->
+                        <div style="margin-left: 1000px;  margin-top: 128px" class="building">
+                            <img src="../buildings/build_4.png" class="house" style="height: 195px">
+                        </div>
+                        <div style="margin-left: 1190px; margin-top: 125px;" class="building">
+                            <img data-build="4" src="../images/info.png" class="info" tabindex="0">
+                        </div>
+
+                        <!-- LVL 5 -->
+                        <div style="margin-left: 1275px; margin-top: 115px" class="building">
+                            <img src="../buildings/build_5.png" class="house" style="height: 195px">
+                        </div>
+                        <div style="margin-left: 1460px; margin-top: 125px;" class="building">
+                            <img data-build="5" src="../images/info.png" class="info" tabindex="0">
+                        </div>
+
+                        <!-- LVL 6 -->
+                        <div style="margin-left: 1540px; margin-top: 107px" class="building">
+                            <img src="../buildings/build_6.png" class="house" style="height: 202px">
+                        </div>
+                        <div style="margin-left: 1700px; margin-top: 125px;" class="building">
+                            <img data-build="6" src="../images/info.png" class="info" tabindex="0">
+                        </div>
+
+                        <img style="width: 1980px; height: 360px" src="../images/homebuilds.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="ms-insert"></div>
+        </div>
+        <div style="padding: 0 15px" class="container ms-decorLine2">
+            <div class="col-md-5 wow fadeInLeft">
+                <img id="build-features" src="../buildings/build_2.png" class="img-responsive" alt="Responsive image">
+            </div>
+            <div style="padding: 5px 15px 0 15px; text-align: center" class="col-md-7 ms-epilog wow fadeInRight">
+                <h3 class="header-text">Game features</h3>
+                <div style="text-align: left; padding-left: 20px; margin: 0 auto; display: inline-block">
+                    <ul style="padding: 0;" class="el-wormax_list wormSpecMove">
+                        <li style="font-weight: 500">Safety and reliability of TRON network</li>
+                        <li style="font-weight: 500">Open <a target="_blank" href="https://tronsmartcontract.space/#/interact/TCPFHFk9VHjTVVdzK4qFTTUmAyv9VwbJmr">source code</a></li>
+                        <li style="font-weight: 500">Transparent stats in blockchain</li>
+                        <li style="font-weight: 500">Automatic addition of coins every hour</li>
+                        <li style="font-weight: 500">Instant payouts TRX</li>
+                        <li style="font-weight: 500">Easy and friendly gameplay</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container ms-decorLine">
+                <div class="col-md-12 ms-endTxt wow fadeInUp" data-wow-delay="0.5s">
+                    <a class="ms-heading-section">
+                        <button style="margin-top: 10px;" class="tron-play ms-btn_play hvr-grow" id="bottom">My village</button>
+                    </a>
+                    <div style="margin: -15px auto 0 auto; text-transform: none" class="row">
+                        <h4>Coin rate</h4>
+                        <div style="" class="abouts">
+                            <span><b>1 TRX = <span class="rate">...</span></b><img src="../images/coin.png" class="icon-value mCS_img_loaded"></span>
+                            <div style="height: 3px"></div>
+                            <span>Other details you can find in the section <a href="#" data-toggle="modal" data-target="#faq-modal" data-dismiss="modal">FAQ</a></span>
+                            <div style="height: 10px"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="wow fadeInUp col-md-8 col-md-offset-2" data-wow-delay="0.6s">
+                        <p style="cursor: pointer; text-transform: none;"><b style="font-family: 'Tinos', 'Times New Roman', Times, serif"><a style="font-family: Tinos, 'Times New Roman', Times, serif" href=".">TronVillage.com</a></b> - economic strategy built on a blockchain Tron Network. Create your production, develop it and get cryptocurrency Tron every day!
+                        </p>
+                        <div style="margin-top: 25px; text-align: center;" class="el-logo_box">
+                            <p class="copyrightTxt"><img id="tron-footer-icon" src="../images/tron.png" class="icon-value mCS_img_loaded">You will need web extension for the game <a target="_blank" href="https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec">TronLink</a> or <a target="_blank" href="https://chrome.google.com/webstore/detail/tronpay/gjdneabihbmcpobmfhcnljaojmgoihfk">TronPay</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="height: 10px"></div>
+    <footer data-moid="social" style="margin-top: 0; min-height: unset;" class="ms-footer wow fadeInUp" data-wow-delay="0.7s">
+        <div class="container">
+            <div style="padding-bottom: 0" class="ms-footer-linkTerm">
+                <a target="_blank" href="https://t.me/TronVillage" class="hvr-bob"><span class="fab fa-telegram social_icon"></span> <span class="social_header">Telegram</span></a>
+                <a target="_blank" href="https://discord.gg/U9rsj4V" class="hvr-bob"><span class="fab fa-discord social_icon"></span> <span class="social_header">Discord</span></a>
+                <a target="_blank" href="https://bitcointalk.org/index.php?topic=5092491.0" class="hvr-bob"><span class="fab fa-bitcoin social_icon"></span> <span class="social_header">Bitcointalk</span></a>
+                <a target="_blank" href="https://tronscan.org/#/contract/TCPFHFk9VHjTVVdzK4qFTTUmAyv9VwbJmr" class="hvr-bob"><span style="font-weight: bold" class="fas fa-link social_icon"></span> <span class="social_header">Contract</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Wallet Modal -->
+    <div style="display: none; margin-left: 15px; margin-right: 15px" class="modal fade" id="wallet-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div style="margin: 0 auto; max-width: 500px; min-width: 280px" class="modal-dialog">
+            <div id="wallet-modal-inner" style="background: url('../images/board_min.png') no-repeat; background-size: cover; border: none;" class="modal-content">
+                <div style="border-top: 0; height: 100%;" class="modal-body">
+                    <div id="wallet-modal-outer" class="form-signin ms-form-signin ms-login-form">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h2 id="wallet-modal-header" class="form-signin-heading">
+                            Please login to
+                            <br>
+                            <img class="wallet-box-icon" src="../images/tron.png"> <a target="_blank" href="https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec" id="wallet-header-red">Tron Chrome Wallet&nbsp;&nbsp;&nbsp;</a>
+                        </h2>
+                        <div id="wallet-box">
+                            <div id="wallet-box-inner">
+                                If you haven't downloaded the web extension yet, download <a class="wallet-link" target="_blank" href="https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec">TronLink</a> or <a class="wallet-link" target="_blank" href="https://chrome.google.com/webstore/detail/tronpay/gjdneabihbmcpobmfhcnljaojmgoihfk">TronPay</a> to work with the website
+                                <div style="height: 7px"></div>
+                                Make sure you are on the mainnet network and not using test network
+                                <div style="height: 7px"></div>
+                                After logging into the wallet or changing the account, please reload the page before the game
+                                <div style="height: 7px"></div>
+                            </div>
+                        </div>
+                        <div id="wallet-box-footer">
+                            <a><button class="btn-white hvr-grow" data-dismiss="modal" aria-label="Close">OK</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<html lang="zh">
+<head>
+
+    <title>Tron Village 是Tron Network区块链的经济策略。</title>
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="创建自己的生产，开发生产并每天获得Tron加密货币！">
+    <meta name="keywords" content="tron, village, tron village, smart, 合约, 投资, tron, coin, trx, 游戏, 策略, 网络, 网赚, 被动收入, 投资者, 投资基金, 收入, 财务, 免费, 简单收益, 如何在网上赚钱, 博彩, bet, 智能合约, 加密货币, 赏金, 比特币, bitcoin, 钱, 轻松赚钱, MMM骗局, 传销(MLM), dice2win, eosbet, mmm3eth, easy invest, 333eth, gorgona, 投资基金, 庞氏骗局">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tron Village 是Tron Network区块链的经济策略。">
+    <meta property="og:description" content="创建自己的生产，开发生产并每天获得Tron加密货币！">
+    <meta property="og:image" content="../images/icon_preview.jpg"/>
+
+    <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/game.css?v=5" type="text/css">
+    <link rel="stylesheet" href="../css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/hover.css" type="text/css">
+    <link rel="stylesheet" href="../css/simplebar.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css?v=5">
+
+    <script src="../js/dest/jquery-2.1.4.min.js"></script>
+    <script src="../js/dest/jquery.touchSwipe.min.js"></script>
+    <script src="../js/dest/jquery.actual.js"></script>
+    <script src="../js/dest/wow.js"></script>
+    <script src="../js/dest/bootstrap.min.js"></script>
+    <script src="../js/dest/countUp.js"></script>
+    <script src="../js/dest/dragscroll.js"></script>
+    <script src="../js/dest/hammer.min.js"></script>
+    <script src="../js/dest/simplebar.min.js"></script>
+    <script src="../js/dest/tippy.min.js"></script>
+    <script src="../js/dest/tronapp.js?v=5"></script>
+    <script src="../js/dest/app.js?v=5"></script>
+    <script src="./index.js?v=5"></script>
+
+    <style>
+
+        html, body {
+            -webkit-font-smoothing: subpixel-antialiased !important;
+        }
+
+    </style>
+
+</head>
+<body style="opacity: 0">
+
+<div id="preloader"></div>
+
+<nav style="width: 100%; z-index: 2" class="ms-navbar navbar-fixed-top wow fadeInDown">
+    <div class="container-fluid">
+        <ul style="margin-right: 0" class="nav navbar-nav ms-navbar-right">
+            <li style="width: 82px" class="dropdown">
+                <a id="current-lang" href="#" class="dropdown-toggle ms-lang" data-toggle="dropdown"><span id="current-lang-inner"></span><b class="caret"></b></a>
+                <ul id="dropdown-lang" class="dropdown-menu">
+                </ul>
+            </li>
+        </ul>
+        <button type="button" class="navbar-toggle navbar-toggle ms-navbar-toggle" data-toggle="collapse"
+                data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav ms-navbar__center">
+                <li><a href="#home">主页</a></li>
+                <li><a href="#concept">概念</a></li>
+                <li><a href="#buildings">工厂</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#faq-modal" data-dismiss="modal">常问问题</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="ms-master">
+    <header id="home" class="ms-header">
+        <div class="container-fluid ms-head">
+            <h1 id="header-logo" class="logo wow zoomIn hvr-shrink" data-wow-delay="0.6s"><a class="ms-logo-link">Tron Village</a></h1>
+            <a><button id="header-tron-play" class="tron-play ms-btn_play wow fadeInUp hvr-grow" data-wow-delay="0.6s">游戏</button></a>
+            <div id="trx-counter-outer" class="ms-counter wow fadeInDown" data-wow-delay="0.6s">
+                <p id="trx-counter" style="font-size: 1.8rem; padding-top: 8px;" class="ms-counter-qty">...</p>
+                <p style="font-size: 1.7rem;" class="ms-counter-txt">TRX储备</p>
+            </div>
+        </div>
+    </header>
+    <div style="display: none" id="buildingTooltip">
+        <div style="min-width: 340px; min-height: 380px;">
+            <div style="padding: 7px 15px 7px 15px; color: #333333; text-align: left;" class="list-group tarif">
+                <div class="list-group-item list-build bg-light"><b><span style="font-size: 2rem; font-weight: 500" class="header-text subpixel-render" id="build-tooltip-name"></span><span class="text-danger pull-right subpixel-render"><span style="font-size: 1.8rem" class="header-text" id="build-tooltip-percentage">24%</span> <span class="list-build-span">每月</span></span></b></div>
+                <div style="height: 340px" class="buildingTooltipOuter">
+                    <div class="buildingTooltipInner">
+                        <div class="list-group-item list-build">
+                            <center><img id="build-tooltip-image" src="../buildings/build_2.png" style="max-width: 67%; max-height: 300px"></center>
+                        </div>
+                        <div class="list-group-item list-build"><span class="list-build-span">每小时收入:</span> <span class="pull-right"><b class="header-text"><span style="font-weight: bold" id="build-tooltip-per-hour">20</span> </b><img src="../images/coin.png" class="icon mCS_img_loaded"> <small class="fa fa-rub" style="font-size: 80%;"></small></span></div>
+                        <div class="list-group-item list-build"><span class="list-build-span">每天收入:</span><span class="pull-right"><b class="header-text"><span style="font-weight: bold" id="build-tooltip-per-day">600</span> </b><img src="../images/coin.png" class="icon mCS_img_loaded"> <small class="fa fa-rub" style="font-size: 80%;"></small></span></div>
+                        <div style="border-bottom: none !important;" class="list-group-item list-build"><span class="list-build-span">价格:</span> <span class="pull-right"><b class="header-text"><span style="font-weight: bold"  id="build-tooltip-cost">270</span> </b><img src="../images/coin.png" class="icon mCS_img_loaded"> <small class="fa fa-rub" style="font-size: 80%;"></small></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="transform: translateY(-40px)" id="concept"></div>
+    <div class="ms-content">
+        <div id="start-container" class="container">
+            <div class="col-md-7 wow fadeInLeft content" data-wow-delay="0.9s" style="margin: 0 -3px">
+                <h2 class="no-select">
+                    <small id="top-title-tron">Tron Network区块链的经济策略</small>
+                    <div style="height: 12px"></div>
+                    <span id="title-tron" class="ms-title_intro header-text ms-heading-section">Tron村庄</span><br>
+                    <div style="height: 5px"></div>
+                </h2>
+                <p>Tron Village是一种经济策略，用它您可以赚Tron加密货币。 成为我们项目的成员以后，您可以经营自己的企业。比如，获取和改善带来真正的生产利润。</p>
+                <p style="margin-top: -15px">参与游戏并每天获得Tron加密货币！</p>
+            </div>
+            <div style="padding: 0; max-width: 500px" class="col-md-5 wow fadeInRight content center-block" data-wow-delay="0.9s">
+                <img id="builds" src="../images/musket/castle.png" class="img-responsive ms-introImg" alt="Responsive image">
+            </div>
+        </div>
+        <div class="wow fadeIn" data-wow-delay="0.5s">
+            <div class="container ms-heroes-box ms-decorLine">
+                <div style="padding-bottom: 0" id="Carousel-Heroes" class="carousel slide ms-carousel">
+                    <ol class="carousel-indicators">
+                        <li id="slide-0" data-target="#Carousel-Heroes" data-slide-to="0" class="active"></li>
+                        <li id="slide-1" data-target="#Carousel-Heroes" data-slide-to="1"></li>
+                    </ol>
+                    <div id="Carousel-Heroes-Inner" style="cursor: move" class="carousel-inner">
+                        <div id="Carousel-Slide-0" data-slide="0" class="item active">
+                            <div class="col-md-5 ms-heroes-boxImg">
+                                <img src="../images/musket/slider1.png" class="img-responsive ms-heroesImg no-select">
+                            </div>
+                            <div class="col-md-7 ms-heroes-txtBox">
+                                <h2 class="no-select">
+                                    <small>建立自己的村庄</small>
+                                    <span class="header-text header-carousel">收购工厂</span>
+                                </h2>
+                                <div class="heroes-description">
+                                    <p class="no-select">在游戏中具有：面包厂、茶厂、养蜂场、啤酒厂、糖果厂和香水厂。投资生产为了发展你的村庄并赚取利润。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Carousel-Slide-1" data-slide="1" class="item">
+                            <div class="col-md-5 ms-heroes-boxImg">
+                                <img src="../images/musket/slider2.png" class="img-responsive ms-heroesImg no-select">
+                            </div>
+                            <div class="col-md-7 ms-heroes-txtBox">
+                                <h2 class="no-select">
+                                    <small>发展你的村庄</small>
+                                    <span class="header-text header-carousel">扩大生产</span>
+                                </h2>
+                                <div class="heroes-description">
+                                    <p class="no-select">您可以把产生的利润再投资于您的生产的发展。您拥有的工厂越多，您的盈利收益就越高。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Carousel-Slide-2" data-slide="2" class="item"></div>
+                        <div id="Carousel-Slide-3" data-slide="3" class="item"></div>
+                    </div>
+                    <a id="slide-prev" class="carousel-control left" href="#Carousel-Heroes" data-slide="prev">‹</a>
+                    <a id="slide-next" class="carousel-control right" href="#Carousel-Heroes" data-slide="next">›</a>
+                </div>
+            </div>
+            <div style="transform: translateY(-40px)" id="buildings"></div>
+            <div class="ms-insert">
+                <div style="padding: 0; overflow-x: hidden; overflow-y: hidden;" id="build-bg" class="col-md-12 ms-build-develop">
+                    <h2 id="homebuilds-header" class="header-text">建立自己的工厂</h2>
+                    <div style="width: 100%; padding: 0;" id="homebuilds-scroll">
+
+                        <!-- LVL 1 -->
+                        <div style="margin-left: 290px; margin-top: 125px" class="building">
+                            <img src="../buildings/build_1.png" class="house">
+                        </div>
+                        <div style="margin-left: 430px; margin-top: 125px;" class="building">
+                            <img data-build="1" src="../images/info.png" class="info" tabindex="0">
+                        </div>
+
+                        <!-- LVL 2 -->
+                        <div data-build="3" style="margin-left: 535px; margin-top: 125px" class="building">
+                            <img src="../buildings/build_2.png" class="house">
+                        </div>
+                        <div style="margin-left: 680px; margin-top: 135px;" class="building">
+                            <img data-build="2" src="../images/info.png" class="info" tabindex="0">
+                        </div>
+
+                        <!-- LVL 3 -->
+                        <div style="margin-left: 765px; margin-top: 120px" class="building">
+                            <img src="../buildings/build_3.png" class="house" style="height: 205px">
+                        </div>
+                        <div style="margin-left: 930px; margin-top: 135px;" class="building">
+                            <img data-build="3" src="../images/info.png" class="info" tabindex="0">
+                        </div>
+
+                        <!-- LVL 4 -->
+                        <div style="margin-left: 1000px;  margin-top: 128px" class="building">
+                            <img src="../buildings/build_4.png" class="house" style="height: 195px">
+                        </div>
+                        <div style="margin-left: 1190px; margin-top: 125px;" class="building">
+                            <img data-build="4" src="../images/info.png" class="info" tabindex="0">
+                        </div>
+
+                        <!-- LVL 5 -->
+                        <div style="margin-left: 1275px; margin-top: 115px" class="building">
+                            <img src="../buildings/build_5.png" class="house" style="height: 195px">
+                        </div>
+                        <div style="margin-left: 1460px; margin-top: 125px;" class="building">
+                            <img data-build="5" src="../images/info.png" class="info" tabindex="0">
+                        </div>
+
+                        <!-- LVL 6 -->
+                        <div style="margin-left: 1540px; margin-top: 107px" class="building">
+                            <img src="../buildings/build_6.png" class="house" style="height: 202px">
+                        </div>
+                        <div style="margin-left: 1700px; margin-top: 125px;" class="building">
+                            <img data-build="6" src="../images/info.png" class="info" tabindex="0">
+                        </div>
+
+                        <img style="width: 1980px; height: 360px" src="../images/homebuilds.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="ms-insert"></div>
+        </div>
+        <div style="padding: 0 15px" class="container ms-decorLine2">
+            <div class="col-md-5 wow fadeInLeft">
+                <img id="build-features" src="../buildings/build_2.png" class="img-responsive" alt="Responsive image">
+            </div>
+            <div style="padding: 5px 15px 0 15px; text-align: center" class="col-md-7 ms-epilog wow fadeInRight">
+                <h3 class="header-text">游戏的主要特点</h3>
+                <div style="text-align: left; padding-left: 20px; margin: 0 auto; display: inline-block">
+                    <ul style="padding: 0;" class="el-wormax_list wormSpecMove">
+                        <li style="font-weight: 500">TRON网络的安全性和可靠性</li>
+                        <li style="font-weight: 500">区块链中的公开和透明统计数据</li>
+                        <li style="font-weight: 500">每小时硬币自动计算</li>
+                        <li style="font-weight: 500">TRX即时付款</li>
+                        <li style="font-weight: 500">玩法简单方便的游戏</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container ms-decorLine">
+                <div class="col-md-12 ms-endTxt wow fadeInUp" data-wow-delay="0.5s">
+                    <a class="ms-heading-section">
+                        <button style="margin-top: 10px;" class="tron-play ms-btn_play hvr-grow" id="bottom">进入游戏</button>
+                    </a>
+                    <div style="margin: -15px auto 0 auto; text-transform: none" class="row">
+                        <h4>硬币汇率</h4>
+                        <div style="" class="abouts">
+                            <span><b>1 TRX = <span class="rate">...</span></b><img src="../images/coin.png" class="icon-value mCS_img_loaded"></span>
+                            <div style="height: 3px"></div>
+                            <span>您可以找到详细信息在 <a href="#" data-toggle="modal" data-target="#faq-modal" data-dismiss="modal"> 常问问题 </a></span>
+                            <div style="height: 10px"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="wow fadeInUp col-md-8 col-md-offset-2" data-wow-delay="0.6s">
+                        <p style="cursor: pointer; text-transform: none;"><b style="font-family: 'Tinos', 'Times New Roman', Times, serif"><a style="font-family: Tinos, 'Times New Roman', Times, serif" href=".">TronVillage.com</a></b> - Tron Network区块链的经济策略。创建您的生产，开发它并每天获得Tron加密货币！
+                        </p>
+                        <div style="margin-top: 25px; text-align: center;" class="el-logo_box">
+                            <p class="copyrightTxt"><img id="tron-footer-icon" src="../images/tron.png" class="icon-value mCS_img_loaded">游戏需要浏览器扩展 <a target="_blank" href="https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec">TronLink</a> 或 <a target="_blank" href="https://chrome.google.com/webstore/detail/tronpay/gjdneabihbmcpobmfhcnljaojmgoihfk">TronPay</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="height: 10px"></div>
+    <footer data-moid="social" style="margin-top: 0; min-height: unset;" class="ms-footer wow fadeInUp" data-wow-delay="0.7s">
+        <div class="container">
+            <div style="padding-bottom: 0" class="ms-footer-linkTerm">
+                <a target="_blank" href="https://t.me/TronVillage" class="hvr-bob"><span class="fab fa-telegram social_icon"></span> <span class="social_header">Telegram</span></a>
+                <a target="_blank" href="https://discord.gg/U9rsj4V" class="hvr-bob"><span class="fab fa-discord social_icon"></span> <span class="social_header">Discord</span></a>
+                <a target="_blank" href="https://bitcointalk.org/index.php?topic=5092491.0" class="hvr-bob"><span class="fab fa-bitcoin social_icon"></span> <span class="social_header">Bitcointalk</span></a>
+                <a target="_blank" href="https://tronscan.org/#/contract/TCPFHFk9VHjTVVdzK4qFTTUmAyv9VwbJmr" class="hvr-bob"><span style="font-weight: bold" class="fas fa-link social_icon"></span> <span class="social_header">Tronscan</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Wallet Modal -->
+    <div style="display: none; margin-left: 15px; margin-right: 15px" class="modal fade" id="wallet-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div style="margin: 0 auto; max-width: 500px; min-width: 280px" class="modal-dialog">
+            <div id="wallet-modal-inner" style="background: url('../images/board_min.png') no-repeat; background-size: cover; border: none;" class="modal-content">
+                <div style="border-top: 0; height: 100%;" class="modal-body">
+                    <div id="wallet-modal-outer" class="form-signin ms-form-signin ms-login-form">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h2 id="wallet-modal-header" class="form-signin-heading">
+                            请登录
+                            <br>
+                            <img class="wallet-box-icon" src="../images/tron.png"> <a target="_blank" href="https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec" id="wallet-header-red">Tron Chrome Wallet&nbsp;&nbsp;&nbsp;</a>
+                        </h2>
+                        <div id="wallet-box">
+                            <div id="wallet-box-inner">
+                                如果您还没下载浏览器扩展程序，请下载 <a class="wallet-link" target="_blank" href="https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec">TronLink</a> 或 <a class="wallet-link" target="_blank" href="https://chrome.google.com/webstore/detail/tronpay/gjdneabihbmcpobmfhcnljaojmgoihfk">TronPay</a> 为了与网站互动。
+                                <div style="height: 7px"></div>
+                                确保您在mainnet主网络上，不要用测试网络。
+                                <div style="height: 7px"></div>
+                                登录钱包或更改帐户后，请开始游戏前刷新页面。
+                                <div style="height: 7px"></div>
+                            </div>
+                        </div>
+                        <div id="wallet-box-footer">
+                            <a><button class="btn-white hvr-grow" data-dismiss="modal" aria-label="Close">OK</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
